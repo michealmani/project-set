@@ -1,0 +1,99 @@
+
+.ban {
+    margin-left: 110px;
+    width: 500px;
+
+}
+.m-div{
+    margin-top: 0;
+    margin-bottom:15px;
+}
+
+.se {
+    color: rgb(243, 34, 34);
+    text-shadow: 0 0 20px rgb(243, 34, 34),
+        0 0 50px rgb(243, 34, 34);
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 0%;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #03e914, 0 0 15px #03e914,
+        0 0 25px #03e914, 0 0 100px 03e914;
+
+}
+
+div.sc{
+    
+    background-color: #fff;
+    overflow: auto;
+    margin:auto;
+    white-space: nowrap;
+    border-radius: 8px;
+   background-color:;
+   
+}
+.sma{
+    border-radius: 5px;
+    
+}
+.mm{
+    border-image:fill 0 linear-gradient(#0003,#000);
+
+}
+div.sc a{
+    display:inline-block;
+    color:#242222;
+    max-width:90px;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+   margin-left: 40px;
+    text-decoration: none;
+    background-color: #03e914;
+    border-radius: 30%;
+    box-shadow: 0 0 20px #03e914;
+}
+.bt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    width: 80px;
+    padding: 18px;
+    background-color: rgb(171, 228, 201);
+    box-shadow: 0 0 10px rgb(130, 236, 187),
+        0 0 20px rgb(37, 238, 144);
+    cursor: pointer;
+}
+
+.bt:hover {
+    color: white;
+}
+.btc:hover{
+    cursor: pointer;
+}
+
+#b {
+    margin-right: 10px;
+}
+.ban1{
+    color: #928e8e;
+    padding: 30px;
+    text-align: center;
+    text-align:justify;
+}
+
+.sec{
+    background: url(../css/mg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px;
+    border-radius: 20px;
+}
+.cd1{
+    
+}
