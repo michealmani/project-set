@@ -24,13 +24,13 @@
 
 div.sc{
     
-    background-color: #fff;
+    background-color: #000;
     overflow: auto;
     margin:auto;
+    padding: 15px;
     white-space: nowrap;
-    border-radius: 8px;
-   background-color:;
-   
+    border-radius: 15px;   
+    opacity: 1.1;
 }
 .sma{
     border-radius: 5px;
@@ -57,6 +57,13 @@ div.sc a{
     background-color: #03e914;
     border-radius: 30%;
     box-shadow: 0 0 20px #03e914;
+}
+div.sc a:hover{
+background-color: rgb(148, 233, 174);
+box-shadow: 0px 0px 10px  rgb(148, 233, 174),
+0px 0px 20px  rgb(148, 233, 174);
+color:red;
+font-size: 17px;
 }
 .bt {
     margin-top: 20px;

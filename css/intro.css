@@ -19,4 +19,19 @@ h1{
     font-size: 30px;
     box-shadow: 0 0 20px #b68b8b,
     0 0 50px #b68b8b ;
+    margin-top: 10px;
+}
+.sub-div3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-radius: 20px;
+    border: 1px solid #917d7d;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 25px;
+    font-size: 30px;
+    box-shadow: 0 0 20px #b68b8b,
+    0 0 50px #b68b8b ;
 }

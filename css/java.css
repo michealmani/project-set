@@ -14,6 +14,8 @@ h1 {
     padding: 10px;
     margin: 20px 10px 0px 10px;
     width:100%;
+    text-align: center
+    ;
 }
 
 ul li {
@@ -58,4 +60,31 @@ ul a {
     background-color: #8d357a;
     
 
+}
+.j-btn{
+    margin-top:25px ;
+    margin-right: 50px;
+    border-radius: 10px;
+    color: #8d357a;
+    padding: 8px;
+    border: none;
+   
+}
+.j-btn:hover{
+    font-size: 30px;
+    color: red;
+    background-color: #fff;
+    transition: 0.2s;
+}
+#ss{
+  
+    
+    display: none;
+}
+.mmp{
+    padding: 60px;
+}
+#ll{
+    margin-top: 0px;
+    margin-left: 250px;
 }
