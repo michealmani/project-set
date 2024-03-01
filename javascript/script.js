@@ -5,5 +5,9 @@ window.open('intro.html');
 function javanote2(){
     window.open('varible.html');
     }
+    function javanote3(){
+        window.open('operator.html');
+        }
+          
     
 

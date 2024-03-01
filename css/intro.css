@@ -1,8 +1,9 @@
-h1{
-    
-    color: rgb(189, 171, 187);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body{
+    font-family: "Poppins", sans-serif;
  
+}
+h1{
+    color: #e7049c;
 }
  
 
@@ -25,7 +26,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: justify;
     border-radius: 20px;
     border: 1px solid #917d7d;
     margin-left: 40px;
@@ -35,3 +36,35 @@ h1{
     box-shadow: 0 0 20px #b68b8b,
     0 0 50px #b68b8b ;
 }
+mark{
+    color: red;;
+}
+.mar{
+    color: black;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .nxt_bt{
+    background-color: green;
+    font-weight: 700;
+    text-align: center;
+    margin-top:10px;
+    border: none;
+    border-radius: 7px;
+    padding: 8px;
+  }
+
+

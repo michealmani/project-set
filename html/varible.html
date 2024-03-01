@@ -4,81 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/intro.css">
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+
 </head>
 
 <body>
-    <div class="main-div">
-        <h1>comments</h1>
-        <div class="sub-div">
-        
-Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
-Single-line comments start with two forward slashes (//).
-Multi-line comments start with /* and ends with */.
+    <div class="main-div container">
 
-        </div>
-        <h1>Java Variables</h1>
-        <div class='sub-div'>Variables are containers for storing data values.
-
-            String - stores text. String values are surrounded by double quotes<br>
-
-            int - stores integers (whole numbers), without decimals.<br>
-            float - stores floating point numbers, with decimals<br>
-
-            char - stores single characters. Char values are surrounded by single quotes<br>
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Comments:</h1>
+                <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to
+                    prevent
+                    execution when testing alternative code.
+                    Single-line comments start with two forward slashes (//).
+                    Multi-line comments start with /* and ends with */.</p>
+            </div>
 
 
-            boolean - stores values with two states: true or false<br>
+            <div class='col-12 col-md-12'>
+                <h1>Java Variables:</h1>
+                <ul>Variables are containers for storing data values.<br>
+
+                    <li><mark>String </mark>- stores text. String values are surrounded by double quotes<br></li>
+
+                    <li><mark>int</mark> - stores integers (whole numbers), without decimals.<br></li>
+                    <li><mark>float </mark>- stores floating point numbers, with decimals<br></li>
+
+                    <li><mark>char</mark> - stores single characters. Char values are surrounded by single quotes<br>
+                    </li>
 
 
-            Declaring (Creating) Variables</div>
+                    <li><mark> boolean </mark>- stores values with two states: true or false<br></li>
 
-        <h1>Syntax</h1>
 
-       <div class="sub-div"> 
-        <code>
-        type variable = value;
-        String name = "csc";
+                    <p>Declaring (Creating) Variables</p>
+                </ul>
+            </div>
+
+
+
+            <div class="col-12 col-md-12">
+                <h1>Syntax:</h1><code>
+        <p>type variable = value;<br>
+        String name = "csc";<br>
         System.out.println(name);<br>
-        Examples for other types
-        int myNum = 5;
-        float myFloatNum = 5.99f;
-        char myLetter = 'D';
-        boolean myBool = true;
-        String myText = "Hello";
-        </code> 
-        <br></div>
-        <h1>To combine both text and a variable, use the + character</h1>
-        <div class="sub-div">
-       <code>String name = "John";
-        System.out.println("Hello " + name);
-        int x = 5;
-        int y = 6;
-        System.out.println(x + y); // Print the value of x + y
-        To declare more than one variable of the same type, use a comma-separated list
-        Example
-        int x = 5, y = 6, z = 50;
-        System.out.println(x + y + z);
+        Examples for other types<br>
+        int myNum = 5;<br>
+        float myFloatNum = 5.99f;<br>
+        char myLetter = 'D';<br>
+        boolean myBool = true;<br>
+        String myText = "Hello";<br>
+    </p>       </code>
+                <br>
+            </div>
+            <div class="col-12 col-md-12">
+                <h5>To combine both text and a variable, use the + character</h5><br>
+                <code>String name = "John";<br>
+        System.out.println("Hello " + name);<br>
+        int x = 5;<br>
+        int y = 6;<br>
+        System.out.println(x + y); // Print the value of x + y<br>
+        To declare more than one variable of the <mark class="mar">same type</mark>, use a comma-separated list
+        Example<br>
+        int x = 5, y = 6, z = 50;<br>
+        System.out.println(x + y + z);<br>
+  
 </code>
-</div>
-<div class="sub-div">
-        <p>Data Types
-        Data types are divided into two groups:<br>
-        • Primitive data types - includes byte, short, int, long, float, double, boolean and char<br>
-        • Non-primitive data types - such as String, Arrays and Classes<br>
-        Data Type Size Description<br>
-        byte 1 byte Stores whole numbers from -128 to 127<br>
-        short 2 bytes Stores whole numbers from -32,768 to 32,767<br>
-        int 4 bytes Stores whole numbers from -2,147,483,648 to 2,147,483,647<br>
-        long 8 bytes Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807<br>
-        float 4 bytes Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits<br>
-        double 8 bytes Stores fractional numbers. Sufficient for storing 15 decimal digits<br>
-        boolean 1 bit Stores true or false values<br>
-        char 2 bytes Stores a single character/letter or ASCII values</p>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Data Types:</h1>
+                <p> Data types are divided into two groups:</p>
+                <ul>
+                    <li>Primitive data types - includes<mark> byte, short, int, long, float, double, boolean
+                        </mark>and<mark> char</mark></li>
+                    <li>
+                        Non-primitive data types - such as <mark>String, Arrays</mark> and <mark>Classes </mark>
+
+                    </li>
+                </ul>
+                <ol>
+                    <li>Byte - 1 byte Stores whole numbers from -128 to 127<br></li>
+                    <li>Short - 2 bytes Stores whole numbers from -32,768 to 32,767<br></li>
+                    <li>Int - 4 bytes Stores whole numbers from -2,147,483,648 to 2,147,483,647<br></li>
+                    <li>Long - 8 bytes Stores whole numbers from -9,223,372,036,854,775,808 to
+                        9,223,372,036,854,775,807<br></li>
+                    <li>Float - 4 bytes Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits<br></li>
+                    <li>Double - 8 bytes Stores fractional numbers. Sufficient for storing 15 decimal digits<br></li>
+                    <li>Boolean - 1 bit Stores true or false values<br></li>
+                    <li>Char - 2 bytes Stores a single character/letter or ASCII values<br></li>
+                </ol>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Type casting:</h1>
+                <p>Type casting is when you assign a value of one primitive data type to another type.</p><br>
+                <code>
+    public class Main {<br>
+        public static void main(String[] args) {<br>
+          int myInt = 9;<br>
+          double myDouble = myInt; // Automatic casting: int to double<br>
+          System.out.println(myInt);<br>
+          System.out.println(myDouble);<br>
+        }<br>}
+      
+</code>
+                <p>escape sequences are valid in Java:</p><br>
+                <table>
+                    <tr>
+                        <th>Code</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>\n</td>
+                        <td>New Line</td>
+                    </tr>
+                    <tr>
+                        <td>\r</td>
+                        <td>Carriage Return</td>
+                    </tr>
+                    <tr>
+                        <td>\t</td>
+                        <td>Tab</td>
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>Backspace</td>
+                    </tr>
+                    <tr>
+                        <td>\f</td>
+                        <td>Form Feed</td>
+                    </tr>
+                </table>
+                <code>
+                    public class Main {<br>
+                        public static void main(String[] args)<br> 
+                        {<br>
+                          String txt = "Hello\nWorld!";<br>
+                          System.out.println(txt);<br>
+                        }<br>
+                      }
+                      
+                </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Java User Input:</h1>
+                <p>The <mark>Scanner</mark> class is used to get user input, and it is found in the<mark>
+                        <ins>java.util</ins></mark>
+                    package.
+                </p>
+                <p>To use the <mark>Scanner</mark> class, create an object of the class and use any of the available
+                    methods found in
+                    the <mark>Scanner</mark> class documentation. In our example, we will use the
+                    <mark><ins>nextLine()</ins></mark> method, which is used to
+                    read Strings:</p>
+                <h5>Example</h5>
+                <code><p>import java.util.Scanner;  // Import the Scanner class<br>
+                        class Main<br> {<br>
+                          public static void main(String[] args) <br>{<br>
+                            Scanner myObj = new Scanner(System.in);  // Create a Scanner object<br>
+                            System.out.println("Enter username");<br>
+                            String userName = myObj.nextLine();  // Read user input<br>
+                            System.out.println("Username is: " + userName);  // Output user input<br>
+                          }<br>}</p>
+                        </code>
+                <h5>Input Types</h5>
+                <table><tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>nextBoolean()</td>
+                    <td>Reads a boolean value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextByte()</td>
+                    <td>Reads a byte value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextDouble()</td>
+                    <td>Reads a double value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextFloat()</td>
+                    <td>Reads a float value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextInt()</td>
+                    <td>Reads a int value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextLine()</td>
+                    <td>Reads a String value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextLong()</td>
+                    <td>Reads a long value from the user</td>
+
+                </tr>
+                <tr>
+                    <td>nextShort()</td>
+                    <td>Reads a short value from the user</td>
+
+                </tr>
+                </table>
+                <code>
+                    import java.util.Scanner;<br>
+class Main <br>{<br>
+  public static void main(String[] args)<br> {<br>
+    Scanner myObj = new Scanner(System.in);<br>
+
+    System.out.println("Enter name, age and salary:");<br>
+
+    // String input<br>
+    String name = myObj.nextLine();<br>
+
+    // Numerical input<br>
+    int age = myObj.nextInt();<br>
+    double salary = myObj.nextDouble();<br>
+
+    // Output input by user<br>
+    System.out.println("Name: " + name);<br> 
+    System.out.println("Age: " + age); <br>
+    System.out.println("Salary: " + salary);<br> 
+  }<br>
+}<br>
+
+                </code>
+            </div>
+            <div class="col-5 col-md-2 ">
+                <button class="nxt_bt" onclick="javanote3()">Next</button>
+            </div>
         </div>
-    
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="../javascript/script.js"></script>
 
 </html>

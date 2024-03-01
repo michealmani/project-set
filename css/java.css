@@ -2,6 +2,8 @@ body,
 h1 {
 
     margin: 0;
+    font-family: "Poppins", sans-serif;
+
 }
 
 .main-div {
@@ -68,6 +70,7 @@ ul a {
     color: #8d357a;
     padding: 8px;
     border: none;
+    width:100%;
    
 }
 .j-btn:hover{
@@ -87,4 +90,9 @@ ul a {
 #ll{
     margin-top: 0px;
     margin-left: 250px;
+}
+.yt_btn{
+
+    border-radius: 10px;
+   
 }
