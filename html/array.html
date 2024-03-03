@@ -120,8 +120,10 @@
                 </p>
                 <h1>By new keyword:</h1>
                 <code>String s=new String("Welcome");//creates two objects and one reference variable </code>
-                <p>In such case, JVM will create a new string object in normal (non-pool) heap memory, and the literal "Welcome" will be placed in the string constant pool. The variable s will refer to the object in a heap (non-pool).</p>
-                <h6>Example  </h6>
+                <p>In such case, JVM will create a new string object in normal (non-pool) heap memory, and the literal
+                    "Welcome" will be placed in the string constant pool. The variable s will refer to the object in a
+                    heap (non-pool).</p>
+                <h6>Example </h6>
                 <code>public class StringExample{  <br>
                     public static void main(String args[]){  <br>
                     String s1="java";  //creating string by Java string literal<br> 
@@ -135,7 +137,266 @@
                      
                     </code>
             </div>
-            <div class="col-12 col-md-12"></div>
+            <div class="col-12 col-md-12">
+                <h1>String Methods:</h1>
+                <table>
+                    <tr>
+                        <th>Method</th>
+                        <th>Use</th>
+                        <th>Return type</th>
+                    </tr>
+                    <tr>
+                        <td>length()</td>
+                        <td>Returns the length of a specified string</td>
+                        <td>Int</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            charAt()</td>
+                        <td>Returns the character at the specified index (position) </td>
+                        <td>Char</td>
+                    </tr>
+                    <tr>
+                        <td>getChars(),getBytes()</td>
+                        <td>Copies chars or bytes into an external array</td>
+                        <td>Void,Byte[]</td>
+                    </tr>
+                    <tr>
+                        <td>equals()</td>
+                        <td>Compares two strings. Returns true if the strings are equal, and false if not</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>equalsIgnoreCase()</td>
+                        <td>Compares two strings, ignoring case considerations</td>
+                        <td>Boolean</td>
+
+                    </tr>
+                    <tr>
+                        <td>compareTo()</td>
+                        <td>Compares two strings lexicographically</td>
+                        <td>Int</td>
+                    </tr>
+                    <tr>
+                        <td>regionMatches() </td>
+                        <td>Tests if two string regions are equal</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>startsWith()</td>
+                        <td>Checks whether a string starts with specified characters</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>endsWith()</td>
+                        <td>Checks whether a string ends with the specified character(s)</td>
+                        <td>Boolean</td>
+                    </tr>
+                    <tr>
+                        <td>indexOf()</td>
+                        <td>Returns the position of the first found occurrence of specified characters in a string</td>
+                        <td>Int</td>
+                    </tr>
+                    <tr>
+                        <td>lastIndexOf()</td>
+                        <td>Returns the position of the last found occurrence of specified characters in a string</td>
+                        <td>Int</td>
+                    </tr>
+                    <tr>
+                        <td>substring()</td>
+                        <td>Returns a new string which is the substring of a specified string</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Appends a string to the end of another string </td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            replace()</td>
+                        <td>Searches a string for a specified value, and returns a new string where the specified values
+                            are replaced</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>toLowerCase()</td>
+                        <td>Converts a string to lower case letters</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>toUpperCase()</td>
+                        <td>Converts a string to upper case letters </td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>trim()</td>
+                        <td>Removes whitespace from both ends of a string</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>valueOf()</td>
+                        <td>Returns the string representation of the specified value</td>
+                        <td>String</td>
+                    </tr>
+                    <tr>
+                        <td>intern()</td>
+                        <td>Returns the canonical representation for the string object</td>
+                        <td>String</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Java Math:</h1>
+                <p>The Java Math class has many methods that allows you to perform mathematical tasks on numbers.
+                    The Math.max(x,y) method can be used to find the highest value of x and y
+                </p>
+                <code>
+
+public class Main {<br>
+    public static void main(String[] args) {<br>
+      System.out.println(Math.max(5, 10));  <br>
+} <br>}
+  
+                    </code>
+                <p>The <mark>Math.min(x,y)</mark> method can be used to find the lowest value of x and y<br>
+                    The <mark>Math.sqrt(x) </mark> method returns the square root of x<br>
+                    The <mark>Math.abs(x)</mark>method returns the absolute (positive) value of x<br>
+                    The <mark>Math.random() </mark>returns a random number between 0.0 (inclusive), and 1.0
+                    (exclusive)<br>
+                    To get more control over the random number, e.g. you only want a random number between 0 and
+                    100,<br>
+                    you can use the following formula:
+                </p>
+                <h6>Example:</h6>
+                <code>  int randomNum = (int)(Math.random() * 101);  // 0 to 100<br>
+public class Main {<br>
+  public static void main(String[] args) {<br>
+    int randomNum = (int)(Math.random() * 101);  // 0 to 100<br>
+    System.out.println(randomNum);<br>
+  }<br>
+}
+</code>
+                <h5>Boolean Values:</h5>
+                <p>A boolean type is declared with the boolean keyword and can only take the values true or false
+                </p>
+                <h5>Example:</h5>
+                <code>boolean isJavaFun = true;<br>
+    boolean isFishTasty = false;<br>
+    System.out.println(isJavaFun);     // Outputs true<br>
+    System.out.println(isFishTasty);   // Outputs false<br>
+    </code>
+                <h1>Java StringBuffer Class:</h1>
+                <p>Java StringBuffer class is used to create mutable (modifiable) String objects. The StringBuffer class
+                    in Java is the same as String class except it is mutable i.e. it can be changed.</p>
+                <h1>StringBuffer Constructors:</h1>
+                <table>
+                    <tr>
+                        <td>Constructor</td>
+                        <td>Description</td>
+
+                    </tr>
+                    <tr>
+                        <td>StringBuffer()</td>
+                        <td>It creates an empty String buffer with the initial capacity of 16.</td>
+                    </tr>
+                    <tr>
+                        <td>StringBuffer(String str)</td>
+                        <td>It creates a String buffer with the specified string.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            StringBuffer(int capacity)</td>
+                        <td>It creates an empty String buffer with the specified capacity as length.</td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>append() Method:</h1>
+                <p>The argument is converted to a string and appended to the end of the current buffer,increasing the buffer if necessary</p>
+                 <code>class StringBufferExample{ <br>
+                    public static void main(String args[]){<br>  
+                    StringBuffer sb=new StringBuffer("Hello "); <br> 
+                    sb.append("Java");//now original string is changed<br>  
+                    System.out.println(sb);//prints Hello Java <br> 
+                    } <br> 
+                    }  
+                    </code>
+                    <h1>insert() Method:</h1>
+                    <p>The second argument is converted to a string and inserted into the current buffer beginning at the offset.</p>
+                    <code>class StringBufferExample2{  <br>
+                        public static void main(String args[]){<br>  
+                        StringBuffer sb=new StringBuffer("Hello ");<br>  
+                        sb.insert(1,"Java");//now original string is changed<br>  
+                        System.out.println(sb);//prints HJavaello  <br>
+                        }  <br>
+                        }  
+                        </code>
+                        <h1>replace() Method:</h1>
+                        <p>The replace() method replaces the given String from the specified beginIndex and endIndex.</p>
+                        <code>class StringBufferExample3{  <br>
+                            public static void main(String args[]){<br>  
+                            StringBuffer sb=new StringBuffer("Hello");<br>  
+                            sb.replace(1,4,"Java");  <br>
+                            System.out.println(sb);//prints HJavalo<br>  
+                            }  <br>
+                            }  
+                            </code>
+                          <h1>delete() Method:</h1>
+                          <p>The delete() method of the StringBuffer class deletes the String from the specified beginIndex to endIndex.</p>
+                          <code>class StringBufferExample4{ <br> 
+                            public static void main(String args[]){  <br>
+                            StringBuffer sb=new StringBuffer("Hello");  <br>
+                            sb.delete(1,3);  <br>
+                            System.out.println(sb);//prints Hlo<br>  
+                            } <br> }  <br>
+                            </code>
+                            <h1>reverse() Method:</h1>
+                            <p>The reverse() method of the StringBuilder class reverses the current String.</p>
+                            <code>class StringBufferExample5{  <br>
+                                public static void main(String args[]){  <br>
+                                StringBuffer sb=new StringBuffer("Hello");  <br>
+                                sb.reverse();  <br>
+                                System.out.println(sb);//prints olleH<br>  
+                                }  <br>
+                                }  
+                                </code>
+                                <h1>capacity() Method:</h1>
+                                <p>The capacity() method of the StringBuffer class returns the current capacity of the buffer.</p>
+                                <code>class StringBufferExample6{ <br> 
+                                    public static void main(String args[]){<br>  
+                                    StringBuffer sb=new StringBuffer();  <br>
+                                    System.out.println(sb.capacity());//default 16  <br>
+                                    sb.append("Hello");  <br>
+                                    System.out.println(sb.capacity());//now 16 <br> 
+                                    sb.append("java is my favourite language"); <br> 
+                                    System.out.println(sb.capacity());//now (16*2)+2=34 i.e (oldcapacity*2)+2  <br>
+                                    }  <br>
+                                    }  <br>
+                                    </code>
+                                    <h1>ensureCapacity() method:</h1>
+                                    <p>The ensureCapacity() method of the StringBuffer class ensures that the given capacity is the minimum to the current capacity.</p>
+                                    <code>class StringBufferExample7{  <br>
+                                        public static void main(String args[]){<br>  
+                                        StringBuffer sb=new StringBuffer();  <br>
+                                        System.out.println(sb.capacity());//default 16<br>  
+                                        sb.append("Hello");  <br>
+                                        System.out.println(sb.capacity());//now 16<br>  
+                                        sb.append("java is my favourite language");  <br>
+                                        System.out.println(sb.capacity());//now (16*2)+2=34 i.e (oldcapacity*2)+2 <br> 
+                                        sb.ensureCapacity(10);//now no change  <br>
+                                        System.out.println(sb.capacity());//now 34 <br> 
+                                        sb.ensureCapacity(50);//now (34*2)+2  <br>
+                                        System.out.println(sb.capacity());//now 70<br>  
+                                        }  <br>
+                                        }  
+                                        </code>
+                            </div>
+                            <div class="col-12 col-md-12 btclass">
+                                <button class="nxt_bt col-md-2 col-4" onclick="javanote4()">Previous</button>
+                                <button class="nxt_bt col-md-2 col-4" onclick="javanote6()">Next</button>
+                            </div>
         </div>
     </div>
 

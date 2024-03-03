@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/intro.css">
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Exception Handling:</h1>
+                <p><b>Exception Handling</b> in Java is one of the powerful mechanism to handle the runtime errors such
+                    as
+                    ClassNotFoundException, IOException, SQLException, RemoteException, etc. so that the normal flow of
+                    the application can be maintained.</p>
+                <h6>Types of error:</h6>
+                <ul>
+                    <li>Compile Time Error(Syntax Error)</li>
+                    <li>Run Time Error(Logical Error)</li>
+                </ul>
+                <h1>Java Exception Keywords:</h1>
+                <p>There are 5 keywords which are used in handling exceptions in Java.</p>
+                <table>
+                    <tr>
+                        <th>
+                            Keyword
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Try</td>
+                        <td>The "try" keyword allows you to define a block of code to be tested for errors while it is
+                            being executed.</td>
+
+                    </tr>
+                    <tr>
+                        <td>Catch</td>
+                        <td>Allows you to define a block of code to be executed if an error occurs in the try block. It
+                            can be followed by finally block later.</td>
+                    </tr>
+                    <tr>
+                        <td>Finally</td>
+                        <td>The "finally" block is used to execute the important code of the program. It is executed
+                            whether an exception is handled or not.</td>
+                    </tr>
+                    <tr>
+                        <td>Throw</td>
+                        <td>The "throw" keyword is used to throw an exception. It allows you to create a custom error.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Throws</td>
+                        <td>The "throws" keyword is used to declare exceptions. It doesn't throw an exception. It
+                            specifies that there may occur an exception in the method. It is always used with method
+                            signature.</td>
+                    </tr>
+                </table>
+                <code>import java.io.*;<br>
+                    public class JavaExceptionExample<br>
+                    {public static void main(String args[]){<br>	
+                    int a=10;<br>
+                    String str="Hai";<br>
+                    try<br>
+                    {<br>
+                    int c=a+str;<br>
+                    }<br>
+                    catch(Exception e)<br>
+                    {<br>
+                    System.out.println(e);<br>
+                    }<br>
+                    System.out.println("welcome");<br>
+                    }<br>
+                    }
+                    </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>JAVA EXCEPTIONS:</h1>
+                <ul>
+                    <li>BUILT IN EXCEPTIONS</li>
+                    <li>USER DEFINED EXCEPTIONS
+                    </li>
+                </ul>
+                <h5>Built-in Exceptions:</h5>
+                <p>Built-in exceptions are the exceptions which are available in Java libraries. These exceptions are
+                    suitable to explain certain error situations. </p>
+                <h6>• ArithmeticException </h6>
+                <p>It is thrown when an exceptional condition has occurred in an arithmetic operation.</p>
+                <h6>• ArrayIndexOutOfBoundsException </h6>
+                <p>It is thrown to indicate that an array has been accessed with an illegal index. The index is either
+                    negative or greater than or equal to the size of the array.</p>
+                <h6>• ClassNotFoundException
+                </h6>
+                <p>This Exception is raised when we try to access a class whose definition is not found</p>
+                <h6>• FileNotFoundException</h6>
+                <p>his Exception is raised when a file is not accessible or does not open.</p>
+                <h6>
+                    • IOException
+                </h6>
+                <p>It is thrown when an input-output operation failed or interrupted I
+                </p>
+                <h6>• InterruptedException </h6>
+                <p>It is thrown when a thread is waiting, sleeping, or doing some processing, and it is interrupted.</p>
+                <h6>• NoSuchFieldException </h6>
+                <p>It is thrown when a class does not contain the field (or variable) specified</p>
+                <h6>• NoSuchMethodException </h6>
+                <p>It is thrown when accessing a method which is not found.</p>
+                <h6>• NullPointerException </h6>
+                <p>This exception is raised when referring to the members of a null object. Null represents nothing</p>
+                <h6>• NumberFormatException </h6>
+                <p>This exception is raised when a method could not convert a string into a numeric format.</p>
+                <h6>• RuntimeException </h6>
+                <p>This represents any exception which occurs during runtime.</p>
+                <h6>• StringIndexOutOfBoundsException </h6>
+                <p>It is thrown by String class methods to indicate that an index is either negative or greater than the
+                    size of the string</p>
+
+            </div>
+            <div class="col-12 col-md-12">
+                <h5>Try and catch:</h5>
+                <code><br>
+                    Import java.util.*;<br>
+                    class excep<br>
+                    {<br>
+                    Public static void main(String args[])
+                    {<br>
+                    Try
+                    {<br>
+                    Int a=8/2;<br>
+                    System.out.println(“A”+a);<br>
+                    }<br>
+                    Catch(Arithmetic Exception e)<br>
+                    {<br>System.out.println(“Division by zero error”);<br>
+                    }<br>
+                    System.out.println(“After catch statement”);<br>
+                    }<br>
+                }
+                    </code>
+            </div>
+            <div class="col-12 col-md-12 btclass">
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote13()">Previous</button>
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote15()">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+
+</html>

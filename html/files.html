@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/intro.css">
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Java Files:</h1>
+                <p>File handling is an important part of any application.Java has several methods for creating, reading,
+                    updating, and deleting files.</p>
+                <h5>Java File Handling;</h5>
+                <p>The <mark>File</mark> class from the <mark>java.io </mark>package, allows us to work with files.
+                    To use the <mark>File </mark>class, create an object of the class, and specify the filename or
+                    directory name:
+                </p>
+                <h5>Example:</h5>
+                <p>import java.io.File; <br>// Import the File class<br>
+                    File myObj = new File("filename.txt"); // Specify the filename<br>
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            Method
+                        </th>
+                        <th>Type</th>
+                        <th>Descriptionth>
+
+                    </tr>
+                    <tr>
+                        <td>canRead()</td>
+                        <td>Boolean</td>
+                        <td>Tests whether the file is readable or not</td>
+                    </tr>
+                    <tr>
+                        <td>canWrite()</td>
+                        <td>Boolean</td>
+                        <td>Tests whether the file is writable or not</td>
+                    </tr>
+                    <tr>
+                        <td>createNewFile() </td>
+                        <td>Boolean</td>
+                        <td>Creates an empty file</td>
+                    </tr>
+                    <tr>
+                        <td>delete()</td>
+                        <td>Boolean</td>
+                        <td>Deletes a file</td>
+                    </tr>
+                    <tr>
+                        <td>exists()</td>
+                        <td>Boolean</td>
+                        <td>Tests whether the file exists</td>
+                    </tr>
+                    <tr>
+                        <td>getName()</td>
+                        <td>String</td>
+                        <td>Returns the name of the file</td>
+                    </tr>
+                    <tr>
+                        <td>getAbsolutePath()</td>
+                        <td>String</td>
+                        <td>Returns the absolute pathname of the file</td>
+                    </tr>
+                    <tr>
+                        <td>length()</td>
+                        <td>Long</td>
+                        <td>Returns the size of the file in bytes</td>
+                    </tr>
+                    <tr>
+                        <td>list() </td>
+                        <td>String[]</td>
+                        <td>Returns an array of the files in the directory</td>
+                    </tr>
+                    <tr>
+                        <td>mkdir()</td>
+                        <td>Boolean</td>
+                        <td>Creates a directory</td>
+                    </tr>
+                </table>
+                <h5>List of all files/folders from a folder :</h5>
+                <p>To get the list of all the existing files in a directory this class provides the files class provides
+                    list() (returns names)
+                    <b>The List()</b> method
+                </p>
+                <p>This method returns a String array which contains the names of all the files and directories in the
+                    path represented by the current (File) object.<br>
+                    Using this method, you can just print the names of the files and directories.
+                </p>
+                <h5>Example:</h5>
+                <p>The following Java program lists the names of all the files and directories in the path
+                    D:\\ExampleDirectory.</p>
+                <code>import java.io.File;<br>
+                    import java.io.IOException;<br>
+                    public class ListOfFiles {<br>
+                       public static void main(String args[]) throws IOException {<br>
+                          //Creating a File object for directory<br>
+                          File directoryPath = new File("D:\\ExampleDirectory");<br>
+                          //List of all files and directories<br>
+                          String contents[] = directoryPath.list();<br>
+                          System.out.println("List of files and directories in the specified directory:");<br>
+                          for(int i=0;i<contents.length;i++)
+                           {<br>
+                             System.out.println(contents[i]);<br>
+                          }<br>
+                       }<br>
+                    }
+                </code>
+
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Create a File:</h1>
+                <p>To create a file in Java, you can use the createNewFile() method. This method returns a boolean
+                    value: true if the file was successfully created, and false if the file already exists. </p>
+                <h6>Example:</h6>
+                <code>import java.io.File;  // Import the File class<br>
+                    import java.io.IOException;  // Import the IOException class to handle errors<br>
+                    public class CreateFile {<br>
+                      public static void main(String[] args) {<br>
+                        try {<br>
+                          File myObj = new File("filename.txt");// File myObj = new File("C:\\Users\\MyName\\filename.txt");<br> 
+                    
+                          if (myObj.createNewFile()) {<br>
+                            System.out.println("File created: " + myObj.getName());<br>
+                    //System.out.println("Absolute path: " + myObj.getAbsolutePath());<br>
+                          } <br>else {<br>
+                            System.out.println("File already exists.");<br>
+                          }<br>
+                        } <br>catch (IOException e) {<br>
+                          System.out.println("An error occurred.");<br>
+                          e.printStackTrace();<br>
+                        }<br>
+                      }<br>
+                    }
+                    </code>
+                <h1>Write To a File:</h1>
+                <p><mark>FileWriter</mark> class together with its <mark>write()</mark> method to write some text to the file we created. when you
+                    are done writing to the file, you should close it with the <mark>close()</mark> method.</p>
+                    <h6>Example:</h6>
+                <code>import java.io.FileWriter;   // Import the FileWriter class<br>
+                    import java.io.IOException;  // Import the IOException class to handle errors<br>
+                    public class WriteToFile {<br>
+                      public static void main(String[] args) {<br>
+                        try {<br>
+                          FileWriter myWriter = new FileWriter("filename.txt");<br>
+                          myWriter.write("Files in Java might be tricky, but it is fun enough!");<br>
+                          myWriter.close();<br>
+                          System.out.println("Successfully wrote to the file.");<br>
+                        } <br>catch (IOException e) {<br>
+                          System.out.println("An error occurred.");<br>
+                          e.printStackTrace();<br>
+                        }<br>
+                      }<br>
+                    }
+                    </code>
+                    <h1>Read a File:</h1>
+                    <p>we use the <mark>Scanner</mark> class to read the contents of the text file.</p>
+                    <h6>Example:</h6>
+                    <code>import java.io.File;  // Import the File class<br>
+                        import java.io.FileNotFoundException;  // Import this class to handle errors<br>
+                        import java.util.Scanner; // Import the Scanner class to read text files<br>
+                        public class ReadFile {<br>
+                          public static void main(String[] args) {<br>
+                            try {<br>
+                              File myObj = new File("filename.txt");<br>
+                              Scanner myReader = new Scanner(myObj);<br>
+                              while (myReader.hasNextLine()) {<br>
+                                String data = myReader.nextLine();<br>
+                                System.out.println(data);<br>
+                              }<br>
+                              myReader.close();<br>
+                            } <br>catch (FileNotFoundException e) {<br>
+                              System.out.println("An error occurred.");<br>
+                              e.printStackTrace();<br>
+                            }<br>
+                          }<br>
+                        }
+                         
+                        </code>
+                        <h1> 
+                            Get File Information
+                            :</h1>
+                       <p>To get more information about a file, use any of the <mark>File</mark>  methods:</p>
+                       <h6>Example:</h6>
+                       <code>import java.io.File;  // Import the File class<br>
+                        public class GetFileInfo { <br>
+                          public static void main(String[] args) {<br>
+                            File myObj = new File("filename.txt");<br>
+                            if (myObj.exists()) {<br>
+                              System.out.println("File name: " + myObj.getName());<br>
+                              System.out.println("Absolute path: " + myObj.getAbsolutePath());<br>
+                              System.out.println("Writeable: " + myObj.canWrite());<br>
+                              System.out.println("Readable " + myObj.canRead());<br>
+                              System.out.println("File size in bytes " + myObj.length());<br>
+                            } <br>else<br> {<br>
+                              System.out.println("The file does not exist.");<br>
+                            }<br>
+                          }<br>
+                        }<br>
+                        </code>
+                        <h1>Delete a File:</h1>
+                        <p>To delete a file in Java, use the <mark>delete()</mark> method:</p> 
+                        <h6>Example:</h6>
+                        <code>import java.io.File;  // Import the File class <br>
+                            public class DeleteFile {<br>
+                              public static void main(String[] args) {<br> 
+                                File myObj = new File("filename.txt"); <br>
+                                if (myObj.delete()) { <br>
+                                  System.out.println("Deleted the file: " + myObj.getName());<br>
+                                } <br>else {<br>
+                                  System.out.println("Failed to delete the file.");<br>
+                                } <br>
+                              } <br>
+                            }
+                            </code>    
+            </div>
+            <div class="col-12 col-md-12 btclass">
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote14()">Previous</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/intro.css">
+    </link>
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+    </link>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Java Package:</h1>
+                <p>A java package is a group of similar types of classes, interfaces and sub-packages.</p>
+                <h6>Two forms</h6>
+                <p>built-in package - java, lang, awt, io, util, sql etc.<br>
+                    o	java.lang − bundles the fundamental classes<br>
+                    o	java.io − classes for input , output functions are bundled in this package
+                    </p>
+                    <p>o user-defined package</p>
+                    <h1>Simple example of java package:</h1>
+                    <p>The package keyword is used to create a package in java.</p>
+                    <p>//save as Simple.java  <br>
+                        package mypack;  <br>
+                        public class Simple{ <br> 
+                         public static void main(String args[]){<br>  
+                            System.out.println("Welcome to package"); <br> 
+                           }  <br>
+                        }  
+                        </p>
+            </div>
+            <div class="col-12 col-md-12">
+                <h3><u>Class_1.java</u></h3>
+                <code>package packages;<br>
+                    import java.io.*;<br>
+                    public class class_1
+                    {<br>
+                    int basic;<br>
+                    double da,ta,allowance,pf,it,dect,netpay;<br>
+                    public class_1(int a)
+                    {<br>
+                    basic=a;<br>
+                    da=basic*0.05;<br>
+                    ta=basic*0.08;<br>
+                    allowance=da+ta;<br>
+                    pf=basic*0.09;<br>
+                    it=basic*0.03;<br>
+                    dect=pf+it;<br>
+                    netpay=(basic+allowance)-dect;<br>
+                    }<br>
+                    public void display()
+                    {<br>
+                    System.out.println("\n Basic Salary"+basic);<br>
+                    System.out.println("\n Dearness Allowance"+da);<br>
+                    System.out.println("\n Travelling Allowance"+ta);<br>
+                    System.out.println("\n Provident Fund"+pf);<br>
+                    System.out.println("\n Income Tax"+it);<br>
+                    System.out.println("\n Deduction"+dect);<br>
+                    System.out.println("\n Net Salary"+netpay);<br>
+                    }<br>
+                    }<br>
+                    </code>
+                    <hr>
+                    <code>import packages.class_1;<br>
+                        import java.io.*;<br>
+                        class main_class<br>
+                        {<br>
+                        public static void main(String args[])
+                        {<br>
+                        class_1 ab=new class_1(50000);<br>
+                        ab.display();<br>
+                        }<br>
+                        }
+                        
+            </div>
+            <div class="col-12 col-md-12 btclass">
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote12()">Previous</button>
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote14()">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/intro.css">
+    </link>
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+    </link>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Constructors:</h1>
+                <p>A constructor initializes an object when it is created. It has the same name as its class. All
+                    classes have constructors, whether you define one or not, because Java automatically provides a
+                    default constructor that initializes all member variables to zero.</p>
+                <h6>Types:</h6>
+                <ol>
+                    <li>Default constructor</li>
+                    <li>Parameterized constructor</li>
+                    <li>Copy constructor</li>
+                </ol>
+                <h1>Parameterized Constructor:</h1>
+                <p>A Java constructor can also accept one or more parameters. Such constructors are known as
+                    parameterized constructors (constructor with parameters).</p>
+                <code>class Main {<br>
+                        String languages;<br>
+                        // constructor accepting single value<br>
+                        Main(String lang) <br>
+                      {<br>
+                          languages = lang;<br>
+                          System.out.println(languages + " Programming Language");<br>
+                        }<br>
+                      
+                        public static void main(String[] args) {<br>
+                      
+                          // call constructor by passing a single value<br>
+                          Main obj1 = new Main("Java");<br>
+                          Main obj2 = new Main("Python");<br>
+                          Main obj3 = new Main("C");<br>
+                        }<br>
+                      }<br>
+                      </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Default Constructor:</h1>
+                <p>If we do not create any constructor, the Java compiler automatically create a no-arg constructor
+                    during the execution of the program. This constructor is called default constructor.</p>
+                <code>class Main {<br>
+                    int a;<br>
+                    boolean b;<br>
+                    public static void main(String[] args) {<br>
+                      // A default constructor is called<br>
+                      Main obj = new Main();<br>
+                      System.out.println("Default Value:");<br>
+                      System.out.println("a = " + obj.a);<br>
+                      System.out.println("b = " + obj.b);<br>
+                    } }
+                  </code>
+                <h1>Copy Constructor:</h1>
+                <p>In Java, a copy constructor is a special type of constructor that creates an object using another
+                    object of the same Java class. It returns a duplicate copy of an existing object of the class.</p>
+                <code>public class Fruit <br> 
+                    {  <br>
+                    private double fprice;<br>  
+                    private String fname; <br> <hr>
+                   <b>//constructor to initialize price and name of the fruit</b>  <br>
+                    Fruit(double fPrice, String fName)<br>  
+                    {   <br>
+                    fprice = fPrice;  <br>
+                    fname = fName;  <br>
+                    }  <br><hr>
+                    <b>//creating a copy constructor<br> </b> 
+                    Fruit(Fruit fruit)  <br>
+                    {  <br>
+                    System.out.println("\nAfter invoking the Copy Constructor:\n");<br>  
+                    fprice = fruit.fprice;  <br>
+                    fname = fruit.fname;  <br>
+                    }  <br><hr>
+                    <b>//creating a method that returns the price of the fruit</b><br> 
+                    double showPrice()  <br>
+                    {  <br>
+                    return fprice;<br>  
+                    }  <br><hr>
+                    <b>//creating a method that returns the name of the fruit </b><br> 
+                    String showName()  <br>
+                    {  <br>
+                    return fname;<br>  
+                    }  <br><hr>
+                    <b>//class to create Fruit object and print price and name of the fruit</b><br>
+                    public static void main(String args[])  <br>
+                    {  <br>
+                    Fruit f1 = new Fruit(100, "Grapes");  <br>
+                    System.out.println("Name of the first fruit: "+ f1.showName()); <br> 
+                    System.out.println("Price of the first fruit: "+ f1.showPrice());  <br><hr>
+                    <b>//passing the parameters to the copy constructor</b>  <br>
+                    Fruit f2 = new Fruit(f1);  <br>
+                    System.out.println("Name of the second fruit: "+ f2.showName());<br>  
+                    System.out.println("Price of the second fruit: "+ f2.showPrice());  <br>
+                    }  <br>
+                    }  <br>
+                    </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <p>The <mark>  this </mark> keyword to the current object in a method or constructor. The most common use of the
+                    this keyword is to eliminate the confusion between class attributes and parameters with the same
+                    name (because a class attribute is shadowed by a method or constructor parameter). ... Return the
+                    current class object.</p>
+                    <h1>Constructors Overloading in Java:</h1>
+                    <p>we can also create two or more constructors with different parameters. This is called constructors overloading.</p>
+                    <h5>Ex: Constructor Overloading</h5>
+                    <code>class Main {<br>
+
+                        String language;<br>
+                      <hr>
+                       <b> // constructor with no parameter</b>
+                        Main() {<br>
+                          this.language = "Java";<br>
+                        }<br><hr>
+                    <b>// constructor with a single parameter</b>
+                        Main(String language) {<br>
+                          this.language = language;<br>
+                        }<br>
+                      
+                        public void getName() {<br>
+                          System.out.println("Programming Langauage: " + this.language);<br>
+                        }<br>
+                        public static void main(String[] args) {<br>
+                      <hr>
+                          <b>// call constructor with no parameter</b>
+                          Main obj1 = new Main();<br><hr>
+                      
+                          <b>// call constructor with a single parameter</b>
+                          Main obj2 = new Main("Python");<br>
+                          obj1.getName();<br>
+                          obj2.getName();<br>
+                        }<br>
+                    }
+                      </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>static variable:</h1>
+                <p>The static variable gets memory only once in the class area at the time of class loading.</p>
+                <code>public class counter
+                    {<br>
+                    Static int x=0;<br>
+                    counter()<br>
+                    {<br>
+                    x++;<br>
+                    }<br>
+                    void display()<br>
+                    {<br>
+                    System.out.println(x);<br>
+                    }<br>
+                    public static void main(String []args)<br>
+                    {<br>
+                    counter c1=new counter();<br>
+                    c1.display();<br>
+                    counter c2=new counter();<br>
+                    c2.display();<br>
+                    counter c3=new counter();<br>
+                    c3.display();<br>
+                    }<br>
+                    }
+                    </code>
+                    <h1>static method:</h1>
+                    <p>When a method is declared with static keyword, it is known as static method. The most common example of a static method is main( ) method.static method can be called and executed without creating objects of the class. Static method can be called or accessed directly using class name. </p>
+                    <h6>syntax :</h6>
+                    <p>className.methodName(); // Here, className is the name of a class.<br>
+                        example:<br>
+                           Student.add(); // Student is the name of class and add is a method.
+                       </p>
+                       <code>public class StaticMethod <br>
+                        { <br>
+                          static int a = 10; <br>
+                         void display() <br>
+                         { <br>
+                            System.out.println("This is an instance method");<br> 
+                         } <br>
+                        static void show()<br>
+                        { <br>
+                           System.out.println("This is a Static method"); <br>
+                         } <br>
+                        public static void main(String[] args)<br> 
+                        { <br>
+                           StaticMethod sm = new StaticMethod();<br> 
+                            sm.display(); <br>
+                           StaticMethod s = null;<br> 
+                            s.show(); <br>
+                           int c = s.a; <br>
+                           System.out.println(c);<br> 
+                          } <br>}
+                        </code>
+            </div>
+                <div class="col-12 col-md-12 btclass">
+                    <button class="nxt_bt col-md-2 col-4" onclick="javanote8()">Previous</button>
+                    <button class="nxt_bt col-md-2 col-4" onclick="javanote10()">Next</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+
+</html>

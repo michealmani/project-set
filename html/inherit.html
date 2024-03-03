@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/intro.css">
+    </link>
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+    </link>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Inheritance:</h1>
+                <p>Inheritance can be defined as the process where one class acquires the properties (methods and
+                    fields) of another.<br>
+                    The class which inherits the properties of other is known as subclass (derived class, child class)
+                    and the class whose properties are inherited is known as superclass (base class, parent class).
+                </p>
+                <h6><mark>extends</mark> Keyword</h6>
+                <p>extends is the keyword used to inherit the properties of a class. </p>
+                <h6>Syntax:</h6>
+                <p>class Super {<br>
+                    .....<br>
+                    .....<br>
+                    }<br>
+                    class Sub extends Super {<br>
+                    .....<br>
+                    .....<br>
+                    }
+                </p>
+                <code>class Employee{  <br>
+                    float salary=40000;  <br>
+                   }<br>
+                   class Programmer extends Employee{  <br>
+                    int bonus=10000;  <br>
+                    public static void main(String args[]){<br>  
+                      Programmer p=new Programmer();  <br>
+                      System.out.println("Programmer salary is:"+p.salary);<br>  
+                      System.out.println("Bonus of Programmer is:"+p.bonus);  <br>
+                   }  <br>
+                   } 
+                   
+                   </code>
+                <h6>My_Calculation.java</h6>
+                <code>class Calculation {<br>
+                    int z;<br>
+                     
+                    public void addition(int x, int y) {<br>
+                       z = x + y;<br>
+                       System.out.println("The sum of the given numbers:"+z);
+ <br>                   }<br>
+                     
+                    public void Subtraction(int x, int y) {<br>
+                       z = x - y;<br>
+                       System.out.println("The difference between the given numbers:"+z);<br>
+                    }<br>
+                 }<br>
+                 
+                 public class My Calculation extends Calculation {<br>
+                    public void multiplication(int x, int y) {<br>
+                       z = x * y;<br>
+                       System.out.println("The product of the given numbers:"+z);<br>
+                    }<br>
+                     
+                    public static void main(String args[]) {<br>
+                       int a = 20, b = 10;<br>
+                       My_Calculation demo = new My_Calculation();<br>
+                       demo.addition(a, b);<br>
+                       demo.Subtraction(a, b);<br>
+                       demo.multiplication(a, b);<br>
+                    }<br>
+                 }<br>
+                 </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>The super keyword</h1>
+                <p>The super keyword is similar to this keyword. </p>
+                <ul>
+                    <li>It is used to differentiate the members of superclass from the members of subclass, if they have
+                        same names.</li>
+                    <li>It is used to invoke the superclass constructor from subclass.</li>
+                    <li>Example Sub_class.java.</li>
+                </ul>
+                <code>
+                    class Super_class {<br>
+                        int num = 20;<br>
+                     
+                        <b>// display method of superclass</b><br>
+                        public void display() {<br>
+                           System.out.println("This is the display method of superclass");<br>
+                        }<br>
+                    }<br>
+                     
+                     public class Sub_class extends Super_class {<br>
+                        int num = 10;<br>
+                     
+                        <b>// display method of sub class</b><br>
+                        public void display() {<br>
+                           System.out.println("This is the display method of subclass");<br>
+                        }<br>
+                     
+                        public void my_method() {<br>
+                           <b>// Instantiating subclass</b><br>
+                           Sub_class sub = new Sub_class();<br>
+                           <b>// Invoking the display() method of sub class</b><br>
+                           sub.display();<br>
+                     
+                           <b>// Invoking the display() method of superclass</b><br>
+                           super.display();<br>
+                     
+                           <b>// printing the value of variable num of subclass</b><br>
+                           System.out.println("value of the variable named num in sub class:"+ sub.num);<br>
+                     
+                          <b> // printing the value of variable num of superclass</b><br>
+                           System.out.println("value of the variable named num in super class:"+ super.num);<br>
+                        }<br>
+                     
+                        public static void main(String args[]) {<br>
+                           Sub_class obj = new Sub_class();<br>
+                           obj.my_method();<br>
+                     }<br>}
+                     
+                     
+                </code>
+                <img src="../css/inherit1.png" width="300" height="300" alt="inheritance">
+                <p>In java programming, multiple inheritance is supported through interface only. </p>
+                <img src="../css/inherit2.jpg" width="300" height="300" alt="inheritance">
+                
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Single Inheritance:</h1>
+                 <code>
+                    Class A<br>
+                    {<br>
+                       public void methodA()<br>
+                       {<br>
+                         System.out.println("Base class method");<br>
+                       }<br>
+                    }<br>
+                    
+                    Class B extends A<br>
+                    {<br>
+                       public void methodB()<br>
+                       {<br>
+                         System.out.println("Child class method");<br>
+                       }<br>
+                       public static void main(String args[])<br>
+                       {<br>
+                         B obj = new B();<br>
+                         obj.methodA(); //calling super class method<br>
+                         obj.methodB(); //calling local method<br>
+                      }<br>
+                    }<br>
+                    </code>
+                    <h1>Multilevel Inheritance:</h1>
+                    <code>Class X
+                        {<br>
+                           public void methodX()
+                           {<br>
+                             System.out.println("Class X method");<br>
+                           }<br>
+                        }<br>
+                        Class Y extends X
+                        {<br>
+                        public void methodY()
+                        {<br>
+                        System.out.println("class Y method");<br>
+                        }<br>
+                        }<br>
+                        Class Z extends Y
+                        {<br>
+                           public void methodZ()
+                           {<br>
+                             System.out.println("class Z method");<br>
+                           }<br>
+                           public static void main(String args[])
+                           {<br>
+                             Z obj = new Z();<br>
+                             obj.methodX(); //calling grand parent class method<br>
+                             obj.methodY(); //calling parent class method<br>
+                             obj.methodZ(); //calling local method<br>
+                          }<br>
+                        }<br>
+                        </code>
+                        <h1>Hierarchical Inheritance:</h1>
+                        <code>class A
+                            {<br>
+                               public void methodA()
+                               {<br>
+                                  System.out.println("method of Class A");<br>
+                               }<br>
+                            }<br>
+                            class B extends A
+                            {<br>
+                               public void methodB()
+                               {<br>
+                                  System.out.println("method of Class B");<br>
+                               }<br>
+                            }<br>
+                            class C extends A
+                            {	<br>
+                              public void methodC()
+                              {<br>
+                                 System.out.println("method of Class C");<br>
+                              }<br>
+                            }<br>
+                            class D extends A
+                            {<br>
+                              public void methodD()
+                              {<br>
+                                 System.out.println("method of Class D");<br>
+                              }<br>
+                            }<br>
+                            class JavaExample
+                            {<br>
+                              public static void main(String args[])
+                              {<br>
+                                 B obj1 = new B();<br>
+                                 C obj2 = new C();<br>
+                                 D obj3 = new D();<br>
+                                 //All classes can access the method of class A<br>
+                                 obj1.methodA();<br>
+                                 obj2.methodA();<br>
+                                 obj3.methodA();<br>
+                              }<br>
+                            }<br>
+                            </code>
+            </div>
+            
+            <div class="col-12 col-md-12 btclass">
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote9()">Previous</button>
+                <button class="nxt_bt col-md-2 col-4" onclick="javanote11()">Next</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+
+
+</html>
