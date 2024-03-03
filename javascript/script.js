@@ -8,6 +8,13 @@ function javanote2(){
     function javanote3(){
         window.open('operator.html');
         }
+        function javanote4(){
+            window.open('control.html');
+            }
+            function javanote5(){
+                window.open('array.html');
+                }
+              
           
     
 

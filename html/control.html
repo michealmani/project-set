@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/intro.css">
+    </link>
+    <link rel="icon" href="https://img.icons8.com/?size=50&id=53421&format=png">
+    </link>
+    <title>Java</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <h1>Control Statements:</h1>
+                <h5>Decision Making statements:</h5>
+                <ul>
+                    <li>
+                        if statements
+                    </li>
+                    <li>
+                        switch statement
+                    </li>
+                </ul>
+                <h5>Loop statements:</h5>
+                <ul>
+                    <li>do while loop</li>
+                    <li>while loop</li>
+                    <li>for loop</li>
+                    <li>for-each loop</li>
+                </ul>
+                <h5>Jump statements</h5>
+                <ul>
+                    <li>break statement</li>
+                    <li>continue statement</li>
+                </ul>
+
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>If Statement:</h1>
+                <ol>
+                    <li>Simple if statement</li>
+                    <li>if-else statement</li>
+                    <li>if-else-if ladder</li>
+                    <li>Nested if-statement</li>
+                </ol>
+                <h5>1) Simple if statement:</h5>
+                <p>It evaluates a Boolean expression and enables the program to enter a block of code if the expression
+                    evaluates to true.</p>
+                <h6>syntax:</h6>
+                <code>
+
+if(condition)<br> {<br>    
+    statement 1; //executes when condition is true   <br> 
+    }   <br> 
+    public class Student<br>  {    <br> 
+    public static void main(String[] args)<br>  {    <br> 
+    int x = 10;    <br> 
+    int y = 12;    <br> 
+    if(x+y > 20) <br> {    <br> 
+    System.out.println("x + y is greater than 20");<br>     
+    }    <br> 
+    }      <br> 
+    }     <br>  
+           </code>
+                <p>The <b>if-else statement</b> is an extension to the if-statement, which uses another block of code,
+                    i.e., else block. The else block is executed if the condition of the if-block is evaluated as false.
+                </p>
+                <h6>Syntax:</h6>
+                <code>
+    if(condition) <br>{ <br>   
+        statement 1; //executes when condition is true <br>  
+        } <br> 
+        else<br>{  <br>
+        statement 2; //executes when condition is false  <br> 
+        }<br>  
+        
+        public class Main<br> {<br>
+          public static void main(String[] args) <br>{<br>
+            int time = 20;<br>
+            if (time < 18)<br> {<br>
+              System.out.println("Good day.");<br>
+            }<br> else <br>{<br>
+              System.out.println("Good evening.");<br>
+            }  <br>
+          }<br>
+        }<br>
+        
+</code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>if-else-if ladder:</h1>
+                <p>The if-else-if statement contains the if-statement followed by multiple else-if statements. In other
+                    words, we can say that it is the chain of if-else statements. We can also define an else statement
+                    at the end of the chain.</p>
+                <p>The else if Statement
+                    Use the else if statement to specify a new condition if the first condition is false.
+                </p>
+                <h6>Syntax:</h6>
+                <code>if(condition 1)<br> {    <br>
+                            statement 1; //executes when condition 1 is true  <br> 
+                            }  <br>
+                            else if(condition 2) <br>{ <br> 
+                            statement 2; //executes when condition 2 is true   <br>
+                            }  <br>
+                            else {  <br>
+                            statement 2; //executes when all the conditions are false <br>  
+                            } <br> 
+                            public class Main <br>{<br>
+                              public static void main(String[] args) <br>{<br>
+                                int time = 22;<br>
+                                if (time < 10)<br> {<br>
+                                  System.out.println("Good morning.");<br>
+                                } else if (time < 20)<br> {<br>
+                                  System.out.println("Good day.");<br>
+                                } <br> else <br>{<br>
+                                  System.out.println("Good evening.");<br>
+                                }<br>
+                              }<br>
+                            }<br>
+                            </code>
+                <h1>Nested if-statement:</h1>
+                <p>In nested if-statements, the if statement can contain a if or if-else statement inside another if or
+                    else-if statement.</p>
+                <h6>Syntax:</h6>
+                <code>if(condition 1) <br>{ <br>   
+            statement 1; //executes when condition 1 is true <br>  
+            if(condition 2)<br> {  <br>
+            statement 2; //executes when condition 2 is true<br>   
+            } <br> 
+            else<br>{  <br>
+            statement 2; //executes when condition 2 is false<br>   
+            }  <br>
+            }  <br>
+            </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Switch Statement:</h1>
+                <p>The switch statement contains multiple blocks of code called cases and a single case is executed
+                    based on the variable which is being switched.</p>
+                <code>switch (expression){<br>  
+                    case value1:<br>  
+                     statement1; <br> 
+                     break;  <br>
+                    .  <br>
+                    .  <br>
+                    .  <br>
+                    case valueN: <br> 
+                     statementN; <br> 
+                     break; <br> 
+                    default:<br>  
+                     default statement;  <br>}
+                
+                public class Student  { <br> 
+                public static void main(String[] args) {<br>  
+                int num = 2;  <br>
+                switch (num){  <br>
+                case 0:  <br>
+                System.out.println("number is 0"); <br>
+                break;  <br>
+                case 1:  <br>
+                System.out.println("number is 1"); <br> 
+                break;  <br>
+                default:  <br>
+                System.out.println(num);<br>  
+                }  
+                }  
+                }  
+                </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Loop Statements:</h1>
+                <p>Used to execute the block of code repeatedly while some condition evaluates to true. </p>
+                <ol>
+                    <li>for loop</li>
+                    <li>while loop</li>
+                    <li>do-while loop</li>
+                </ol>
+                <h>for loop:</h>
+                <p>
+                    It enables us to initialize the loop variable, check the condition, and increment/decrement in a
+                    single line of code
+                </p>
+                <p>for(initialization, condition, increment/decrement) {<br>
+                    //block of statements<br>
+                    }
+                </p>
+                <code>public class Calculation {  <br>
+        public static void main(String[] args) { <br> 
+        int sum = 0;  <br>
+        for(int j = 1; j<=10; j++) {  <br>
+        sum = sum + j;  <br>
+        }  <br>
+        System.out.println("The sum of first 10 natural numbers is " + sum);  <br>
+        }  <br>
+        }  
+        
+        </code>
+                <h1>for-each loop:</h1>
+                <p>Java provides an enhanced for loop to traverse the data structures like array or collection. In the
+                    for-each loop, we don't need to update the loop variable</p>
+                <p>for(data_type var : array_name/collection_name){<br>
+                    //statements<br>
+                    }
+                </p>
+                <code>
+                    public class Calculation {<br>    
+                        public static void main(String[] args) {<br>    
+                        String[] names = {"Java","C","C++","Python","JavaScript"}; <br>   
+                        System.out.println("Printing the content of the array names:\n"); <br>   
+                        for(String name:names) {   <br> 
+                        System.out.println(name);  <br>  
+                        } <br>  }<br>} 
+                        
+                </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>while loop:</h1>
+                <p>The while loop is also used to iterate over the number of statements multiple times. It is also known
+                    as the entry-controlled loop since the condition is checked at the start of the loop</p>
+                    <p>syntax <br>
+                        while(condition){    <br>
+                        //looping statements  <br>  
+                        }  
+                        </p>
+                        <h5>syntax</h5> 
+                           <p> while(condition)  { <br>
+                            //looping statements    <br>
+                            } </p> 
+                            <code>
+                            public class Calculation { <br>   
+                            public static void main(String[] args) {<br>    
+                            int i = 0;    <br>
+                            System.out.println("Printing the list of first 10 even numbers \n"); <br>   
+                            while(i<=10) {    <br>
+                            System.out.println(i); <br>   
+                            i = i + 2;  <br>  
+                            }   <br> 
+                            }   <br> 
+                            }    
+                            </code>
+
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>do-while loop:</h1>
+                <p>The do-while loop checks the condition at the end of the loop after executing the loop statements. It is also known as the exit-controlled loop since the condition is not checked in advance.</p>
+                <p>do<br>  
+                    {    <br>
+                    //statements<br>    
+                    } while (condition);<br>  
+                    
+                    </p>
+                    <code>
+                        public class Calculation {<br>    
+                            public static void main(String[] args) {   <br> 
+                            int i = 0;<br>    
+                            System.out.println("Printing the list of first 10 even numbers \n");<br>    
+                            do {  <br>  
+                            System.out.println(i); <br>   
+                            i = i + 2;   <br> 
+                            }while(i<=10);  <br>  
+                            }   <br> 
+                            }    
+                        </code>
+            </div>
+            <div class="col-12 col-md-12">
+                <h1>Jump Statements:</h1>
+                <p>jump statements transfer the execution control to the other part of the program. There are two types of jump statements in Java, i.e., break and continue.</p>
+                <h1>break statement:</h1>
+                <p>The break statement cannot be used independently in the Java program, i.e., it can only be written inside the loop or switch statement.</p>
+                <code>public class BreakExample {  <br>
+                    public static void main(String[] args) {<br>  
+                   for(int i = 0; i<= 10; i++) {  <br>
+                   System.out.println(i);  <br>
+                   if(i==6) {  <br>
+                   break;  <br>
+                   }  }  }  }  
+                   </code>
+                   <h1>continue statement:</h1>
+                   <p>continue statement doesn't break the loop, whereas, it skips the specific part of the loop and jumps to the next iteration of the loop immediately</p>
+                   <code>public class ContinueExample {<br>  
+                    public static void main(String[] args) { <br> 
+                   for(int i = 0; i<= 2; i++) {<br>  
+                     for (int j = i; j<=5; j++) {  <br>
+                     if(j == 4) {  <br>
+                   continue;  <br>
+                   }  <br>
+                   System.out.println(j);  <br>
+                   }  
+                   }  
+                   }  
+                   }  
+                   
+                   </code>
+                   <div class="col-12 col-md-12 btclass">
+                    <button class="nxt_bt col-md-2 col-6" onclick="javanote3()">Previous</button>
+                    <button class="nxt_bt col-md-2 col-6" onclick="javanote5()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../javascript/script.js"></script>
+
+</html>
