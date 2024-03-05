@@ -74,3 +74,15 @@ table {
   align-items: center;
   justify-content: space-between;
 }
+
+.popupbox{
+  
+  background-color: rgb(245, 66, 66);
+  color:white;
+  margin-top: 20px;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+ 
+}
